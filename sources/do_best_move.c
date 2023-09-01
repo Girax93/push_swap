@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:29:25 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:29:29 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:42:53 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	do_best_move(t_stack **stack_a, t_stack **stack_b)
 
 	if (current_best)
 		move_to_a(stack_a, stack_b, current_best->cost_a, current_best->cost_b);
-} // Mine
+}
 
 // Prepares each stack before pushing stack_b to stack_a.
 // This is done by finding the best way to rotate both stacks before pushing.

@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:29:49 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:29:57 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:44:23 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	num_check(char *av)
 	while (av[i] && ft_isdigit(av[i]))
 		i++;
 	return (av[i] == '\0');
-} // Mine
+}
 
 
 // Bool: does the input (1 arg) consist of only 0's?
@@ -39,7 +39,7 @@ int	zero_check(char *av)
 	while (av[i] == '0')
 		i++;
 	return (av[i] == '\0');
-} // Mine
+}
 
 
 // Bool: are there duplicate numbers in the args?
@@ -61,7 +61,7 @@ int	duplicate_check(char **av)
 		i++;
 	}
 	return (0);
-} // Mine
+}
 
 // Bool: is the input correct?
 // Checks if the input has more than one 0 value,
@@ -83,4 +83,4 @@ int	is_correct_input(char **av)
 	if (duplicate_check(av))
 		return (0);
 	return (1);
-} // Mine
+}

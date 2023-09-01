@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:30:51 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:30:53 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:50:02 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ long int	ft_atol(const char *str)
 		str++;
 	}
 	return (nb * isneg);
-} // Mine
+}
 
 //finds highest val in the list
 int	find_highest(t_stack *stack)
@@ -47,7 +47,7 @@ int	find_highest(t_stack *stack)
 		stack = stack->next;
 	}
 	return (highest);
-} // Mine
+}
 
 // Returns the current pos of the lowest number in stack_a.
 int	find_lowest_pos(t_stack **stack)
@@ -66,7 +66,7 @@ int	find_lowest_pos(t_stack **stack)
 		current = current->next;
 	}
 	return (lowest->pos);
-} // Mine
+}
 
 // Turns a negative number into a positive one :)
 int	abs_num(int num)
@@ -95,5 +95,5 @@ int num_str_cmp(const char *s1, const char *s2)
 		s2++;
     }
     return ((unsigned char)*s1 - (unsigned char)*s2);
-} // Mine
+}
 

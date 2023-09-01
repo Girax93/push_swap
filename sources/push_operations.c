@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:31:00 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:31:01 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:50:31 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	push_a(t_stack **stack_a, t_stack **stack_b)
 		tmp = tmp->next;
 	}
 	write(1, "pa\n", 3);
-} // Mine
+}
 
 // 1. Take the top element from stack_a and push to stack_b
 // 2. Update positions in stack_a
@@ -72,4 +72,4 @@ void	push_b(t_stack **stack_a, t_stack **stack_b)
 		tmp = tmp->next;
 	}
 	write(1, "pb\n", 3);
-} // Mine
+}

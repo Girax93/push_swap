@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:31:28 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:38:32 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:51:07 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	rotate(t_stack **stack)
 		tail = tail->next;
 	}
 	head->pos = size;
-} // Mine
+}
 
 // ra (first becomes last)
 void	rotate_a(t_stack **stack_a)

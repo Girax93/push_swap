@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:30:07 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:30:11 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:44:32 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ t_stack	*fill_stack_a(int ac, char **av)
 	}
 	sorted_pos(stack_a);
 	return (stack_a);
-} // Mine
+}

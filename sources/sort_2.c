@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:30:20 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:30:23 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:46:56 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	set_target_pos(t_stack **stack_a, t_stack **stack_b)
 		tmp_b->target_pos = target_pos;
 		tmp_b = tmp_b->next;
 	}
-} // Mine
+}
 
 // Find the closest higher value in stack A, than it's current number.
 // I.E if stack_a is 3, 4, 5 and stack_b is 2, 1, 0, target_pos of 2 = 1.
@@ -41,7 +41,7 @@ int	find_target_pos(t_stack *stack_a, t_stack *b)
 	if (target_sorted == INT_MAX)
 		target_pos = lowest_sorted_pos(stack_a, &target_sorted);
 	return (target_pos);
-} // Mine
+}
 
 // Let's say at this point, we have these numbers:
 // 5 2 7 3 1 4 6 8 sorted out like this: (left = top of stack).
@@ -67,7 +67,7 @@ int	closest_higher(t_stack *stack_a, t_stack *stack_b, int *target_sorted)
 		tmp_a = tmp_a->next;
 	}
 	return (target_pos);
-} // Mine
+}
 
 int	lowest_sorted_pos(t_stack *stack_a, int *target_sorted)
 {
@@ -86,7 +86,7 @@ int	lowest_sorted_pos(t_stack *stack_a, int *target_sorted)
 		tmp_a = tmp_a->next;
 	}
 	return (target_pos);
-} // Mine
+}
 
 // cost_a is the cost of getting to the right position in stack A,
 // * Assuming it is on the top of stack_b. (push to A is not counted)
@@ -119,5 +119,5 @@ void get_cost(t_stack **stack_a, t_stack **stack_b)
 			tmp_b->cost_a = (size_a - tmp_b->target_pos + 1) * -1;
 		tmp_b = tmp_b->next;
 	}
-} // Mine
+}
 

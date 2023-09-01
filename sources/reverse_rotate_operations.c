@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:31:16 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:31:17 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:50:49 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_stack	*new_tail(t_stack *new_tail)
 		old_tail = old_tail->next;
 	}
 	return (new_tail);
-} // Mine
+}
 
 // Shift down all elements of stack a by 1.
 // The last element becomes the first one.
@@ -59,7 +59,7 @@ void	reverse_rotate(t_stack **stack)
 		old_tail->pos = pos++;
 		old_tail = old_tail->next;
 	}
-} // Mine
+}
 
 // rra
 void	reverse_rotate_a(t_stack **stack_a)

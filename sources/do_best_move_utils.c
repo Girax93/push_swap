@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:29:05 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:29:09 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:42:44 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	rotate_a_to_pos(t_stack **stack_a, int *cost_a)
 		reverse_rotate_a(stack_a);
 		(*cost_a)++;
 	}
-} // Mine
+}
 
 // rotates b until it is in position
 void	rotate_b_to_pos(t_stack **stack_b, int *cost_b)
@@ -62,4 +62,4 @@ void	rotate_b_to_pos(t_stack **stack_b, int *cost_b)
 		reverse_rotate_b(stack_b);
 		(*cost_b)++;
 	}
-} // Mine
+}

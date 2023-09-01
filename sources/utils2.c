@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:31:49 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:48:43 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:51:31 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void remove_leading_zeros(char *av)
 		- first_non_zero + 1);
     else if (start == 0 && first_non_zero == -1)
         av[1] = '\0';
-} // Mine
+}
 
 // Simply writes "Error" to stdout,
 // And exits the program

@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:30:32 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:30:35 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:48:39 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,6 @@
 // if the highest number is on top, do: ra, then sa if still unsorted.
 // if 2nd number is the highest, do: rra, then sa if still unsorted.
 // if the highest number is on the bottom, do: sa.
-/*
-void	sort_three(t_stack **stack_a)
-{
-	int	highest;
-
-	if (sorted_check(*stack_a) == 1)
-		return ;
-	highest = find_highest(*stack_a);
-	if ((*stack_a)->val == highest)
-	{
-		rotate_a(stack_a);
-		if (sorted_check(*stack_a) == 0)
-			swap_a(stack_a);
-	}
-	else if ((*stack_a)->next->val == highest)
-	{
-		reverse_rotate_a(stack_a);
-		if (sorted_check(*stack_a) == 0)
-			swap_a(stack_a);
-	}
-	else
-		swap_a(stack_a);
-}*/
 
 void	sort_three(t_stack **stack_a)
 {
@@ -57,7 +34,7 @@ void	sort_three(t_stack **stack_a)
 	}
 	if (sorted_check(*stack_a) == 0)
 		swap_a(stack_a);
-} // Mine
+}
 
 // For stacks bigger than 6:
 // (While) counts up to size, or until we have pushed half the stack.
@@ -95,7 +72,7 @@ void	sorted_push_except_three(t_stack **stack_a, t_stack **stack_b)
 		push_b(stack_a, stack_b);
 		pushed++;
 	}
-} // Mine
+}
 
 void	sort_big(t_stack **stack_a, t_stack **stack_b)
 {
@@ -131,7 +108,7 @@ void	shift_stack(t_stack **stack_a)
 		while (pos_of_lowest--)
 			rotate_a(stack_a);
 	}
-} // Mine
+}
 
 void	push_swap(t_stack **stack_a, t_stack **stack_b)
 {

@@ -37,33 +37,47 @@ DEPENDS		=	$(addprefix $(DEP_DIR), $(OBJECTS:.c=.d))
 PRINTED		=	0
 
 end: all
+	@echo -e "$(GREEN)[1 / 5] made an objects folder. $(NO_COLOR)"
+	@sleep 0.5
+	@echo -e "$(GREEN)[2 / 5] made another folder.    $(NO_COLOR)"
+	@sleep 1
+	@echo -e "$(GREEN)[3 / 6] created some files...   $(NO_COLOR)"
+	@sleep 1
+	@echo -e "$(GREEN)[4 / 9] .. $(NO_COLOR)"
+	@sleep 1.5
+	@echo -e "$(GREEN)[8 / 35] ....                   $(NO_COLOR)"
+	@sleep 1.5
+	@echo -e "$(GREEN)[? / ?] Zzzz...    ZzzZZzzz...  $(NO_COLOR)"
+	@sleep 2
 	@if [ "$(shell uname)" = "Darwin" ]; then \
         bash extras/MAC_COMMANDS.sh; \
     elif [ "$(shell uname)" = "Linux" ]; then \
         bash extras/LIN_COMMANDS.sh; \
     fi
 
-all skip: $(NAME)
+skip: $(NAME)
+	@echo -e "$(RED)[ WAT!? NO FUN !!?!? ] $(NO_COLOR)"
+	@sleep 1
+	@echo -e "$(GREEN)[ ok.... done! ] $(NO_COLOR)"
+
+# THE ACTUAL MAKEFILE :)
+
+all: $(NAME)
+	@echo -e "$(GREEN)[ Recompilation Complete! ] $(NO_COLOR)"
 
 -include $(DEPENDS)
 
 lib: | $(OBJS_DIR) $(DEP_DIR)
 	@make -C $(LIB_DIR) > /dev/null 2>&1
-	@echo -e "$(GREEN)[4 / 9] .. $(NO_COLOR)"
-	@sleep 1
 
 $(NAME): $(OBJECTS) lib
 	@$(CC) $(FLAGS) -I $(LIB_DIR) -o $@ $(OBJECTS) -L$(LIB_DIR) -lft
-	@echo -e "$(GREEN)[8 / 35] ....$(NO_COLOR)"
-	@sleep 1
-	@echo -e "$(GREEN)[? / ?] Zzzz...    ZzzZZzzz...$(NO_COLOR)"
-	@sleep 1
 
 $(OBJS_DIR)%.o: $(SRC_DIR)%.c | $(OBJS_DIR) $(DEP_DIR)
 	@$(CC) $(FLAGS) -I $(INC_DIR) -c $< -o $@
 	@cp $(OBJS_DIR)$*.d $(DEP_DIR)$*.d
 	@rm -f $(OBJS_DIR)$*.d
-	@if [ $(PRINTED) -eq 0 ]; then \
+#	@if [ $(PRINTED) -eq 0 ]; then \
 		echo -e "$(GREEN)[3 / 6] created some files...$(NO_COLOR)"; \
 		sleep 1; \
 		$(eval PRINTED = 1) \
@@ -71,13 +85,9 @@ $(OBJS_DIR)%.o: $(SRC_DIR)%.c | $(OBJS_DIR) $(DEP_DIR)
 
 $(OBJS_DIR):
 	@mkdir -p $@
-	@echo -e "$(GREEN)[1 / 5] made an objects folder.$(NO_COLOR)"
-	@sleep 1
 
 $(DEP_DIR):
 	@mkdir -p $@
-	@echo -e "$(GREEN)[2 / 5] made another folder.$(NO_COLOR)"
-	@sleep 2
 
 clean:
 	@make fclean -C $(LIB_DIR) > /dev/null 2>&1
@@ -91,7 +101,7 @@ fclean: clean
 	@rm -f $(NAME) > /dev/null 2>&1
 	@echo -e "$(GREEN)[ Removed push_swap ]$(NO_COLOR)"
 
-re: fclean all end
+re: fclean all
 
 re-skip: fclean all
 

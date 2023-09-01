@@ -6,7 +6,7 @@
 /*   By: agrawe <agrawe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:30:43 by agrawe            #+#    #+#             */
-/*   Updated: 2023/08/20 23:30:45 by agrawe           ###   ########.fr       */
+/*   Updated: 2023/08/29 18:49:28 by agrawe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int list_size(t_stack *stack)
 		stack = stack->next;
 	}
 	return (size);
-} // Mine
+}
 
 //frees the list
 void	free_list(t_stack **list)
