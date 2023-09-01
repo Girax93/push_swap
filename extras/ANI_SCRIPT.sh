@@ -587,7 +587,7 @@ ${BLUE}   ${YELLOW}  .  ${BLUE}                          111111111              
 ${BLUE}   ${YELLOW} .   ${BLUE}                         11111111111                             ${NO_COLOR}
 ${BLUE}                                1111111111111                            ${NO_COLOR}
 ${BLUE}    ${YELLOW}    '    *${BLUE}lose             111111111111111                           ${NO_COLOR}
-${BLUE}    ${YELLOW}  .-'   ${BLUE} ' ._|           11111111111111111                          ${NO_COLOR}
+${BLUE}    ${YELLOW}  .-'   ${BLUE} ' ._|            11111111111111111                          ${NO_COLOR}
 ${BLUE}                             1111111111111111111                         ${NO_COLOR}
 ${BLUE}                          11    11111111111111111                        ${NO_COLOR}
 ${BLUE}                         111111    111111111111111                       ${NO_COLOR}

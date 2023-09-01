@@ -63,7 +63,7 @@ skip: $(NAME)
 # THE ACTUAL MAKEFILE :)
 
 all: $(NAME)
-	@echo -e "$(GREEN)[ Recompilation Complete! ] $(NO_COLOR)"
+
 
 -include $(DEPENDS)
 
@@ -102,6 +102,7 @@ fclean: clean
 	@echo -e "$(GREEN)[ Removed push_swap ]$(NO_COLOR)"
 
 re: fclean all
+	@echo -e "$(GREEN)[ Recompilation Complete! ] $(NO_COLOR)"
 
 re-skip: fclean all
 
