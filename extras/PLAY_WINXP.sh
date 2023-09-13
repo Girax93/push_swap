@@ -5,13 +5,13 @@ SOUND_FILE="extras/winxp.wav"
 
 # Check for 'aplay' (often default on ubuntu)
 if command -v aplay > /dev/null 2>&1; then
-    aplay "$SOUND_FILE"
+    aplay "$SOUND_FILE" &> /dev/null
 # Check for 'paplay' (often default on Arch)
 elif command -v paplay > /dev/null 2>&1; then
-    paplay "$SOUND_FILE"
+    paplay "$SOUND_FILE" &> /dev/null
 # Check for 'afplay' (default macOS audio player)
 elif command -v afplay > /dev/null 2>&1; then
-    afplay "$SOUND_FILE"
+    afplay "$SOUND_FILE" &> /dev/null
 else
     echo "No suitable audio player found."
 fi
