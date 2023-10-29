@@ -1,5 +1,6 @@
 # push_swap
 42 Push_Swap
 
-todo: update Makefile
- only *.c, *.h and Makefile allowed :(
+Todo: remove this README.md file before pushing.
+
+- update the readme for github.
